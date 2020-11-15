@@ -1,7 +1,7 @@
 # vim
 ## vim configuration files
 
-### Install on Gnu/Linux
+### Install on GNU/Linux
 Clone it in the home directory as _.vim_ and create a symbolic link to the config file inside:
 ```bash
 cd
