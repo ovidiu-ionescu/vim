@@ -31,3 +31,17 @@ digraph RR 8477
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+"Comments
+autocmd FileType javascript nnoremap <buffer> <leader>c I//<esc>
+autocmd FileType python     nnoremap <buffer> <leader>c I#<esc>
+
+"Abbreviations
+autocmd FileType python     :iabbrev <buffer> iff if:<left>
+autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
+
+set hlsearch
+
+autocmd FileType javascript iabbrev itt it('', () => {<cr>});<up><right>
+autocmd FileType javascript set tabstop=2
+autocmd FileType javascript set shiftwidth=2
+autocmd FileType javascript set expandtab
