@@ -1,3 +1,6 @@
+" don't pretend you are vi
+set nocompatible
+
 inoremap jk <ESC>
 let mapleader=" "
 
@@ -7,6 +10,7 @@ set encoding=utf8
 set clipboard=unnamedplus
 
 set spell spelllang=en_gb
+set spell!
 nnoremap <leader>ss :set spell!
 nnoremap <leader>v ^r✓
 
@@ -45,3 +49,14 @@ autocmd FileType javascript iabbrev itt it('', () => {<cr>});<up><right>
 autocmd FileType javascript set tabstop=2
 autocmd FileType javascript set shiftwidth=2
 autocmd FileType javascript set expandtab
+
+" File operations
+" Search down into folders. Tab completion
+"+= append to existing value
+set path+=**
+" display all matching files at tab
+set wildmenu
+
+" Templates
+nnoremap <leader>html :-1read $HOME/.vim/templates/skeleton.html<cr>
+
