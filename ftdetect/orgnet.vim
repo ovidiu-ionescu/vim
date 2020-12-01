@@ -1,2 +1,2 @@
-au BufRead,BufNewFile *.orgnet set filetype=orgnet
+au BufRead,BufNewFile *.{ncf,orgnet} set filetype=orgnet
 
